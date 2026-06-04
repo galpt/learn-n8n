@@ -53,7 +53,7 @@ See `fix-license-activation.sh --help` for all options.
 
 ```
 learn-n8n/
-├── LICENSE                     # MIT License
+├── LICENSE                    # MIT License
 ├── README.md                  # This file
 ├── setup-n8n.sh               # n8n installation script (Arch Linux)
 ├── fix-license-activation.sh  # License activation workaround
