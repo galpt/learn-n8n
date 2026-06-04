@@ -1,0 +1,62 @@
+{
+  "name": "Hello World",
+  "nodes": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "parameters": {}
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000002",
+      "name": "Build Greeting",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [500, 300],
+      "parameters": {
+        "language": "javaScript",
+        "code": "const output = {\n  greet: 'Hello from n8n!',\n  timestamp: new Date().toISOString(),\n  message: 'Your first n8n workflow is working!'\n};\nreturn [output];"
+      }
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000003",
+      "name": "Done",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [750, 300],
+      "parameters": {}
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Build Greeting",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Greeting": {
+      "main": [
+        [
+          {
+            "node": "Done",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "versionId": "v1-init",
+  "active": false,
+  "settings": {},
+  "staticData": null,
+  "tags": []
+}

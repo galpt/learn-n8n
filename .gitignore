@@ -1,0 +1,21 @@
+# n8n database (contains encrypted credentials)
+*.db
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# n8n user data
+.n8n/
+
+# Node modules (if local install)
+node_modules/
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp files from license fix script
+/tmp/n8n-*

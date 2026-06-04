@@ -1,0 +1,16 @@
+# Database
+*.db
+*.sqlite
+
+# Node modules (if local install is used)
+node_modules/
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# n8n user data
+.n8n/
